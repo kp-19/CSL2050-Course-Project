@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Recognition & Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+	.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 150px; /* adjust as needed */
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.team-member a {
+    display: inline-block;
+    background-color: #0077B5;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.team-member a:hover {
+    background-color: #005682;
+}
+
+        .carousel {
+            position: relative;
+            max-width: 600px; /* Adjust based on your requirement */
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .carousel-images img {
+            width: 100%;
+            transition: transform 0.5s ease; /* Smoothing transition */
+            display: block;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+	.video-container {
+    text-align: center; /* Centers the iframe horizontally */
+}
+
+.video-container iframe {
+    margin: 0 auto; /* Additional centering for iframe */
+    display: block; /* Makes sure the iframe is block-level */
+}
+
+        .control {
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        .control:hover {
+            opacity: 1;
+        }
+        input, select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* makes sure padding doesn't affect width */
+        }
+	.report-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.report-container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stacks items vertically */
+    text-align: center; /* Centers text elements */
+}
+
+.report-image {
+    max-width: 100%; /* Adjust width as necessary, could be less for smaller images */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.report-details h3, .report-details p {
+    margin: 0; /* Removes default margins */
+}
+
+
+.report-details h3 {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+}
+
+.report-details p {
+    margin: 0 0 10px 0;
+}
+
+.report-details a {
+    text-decoration: none;
+    color: #017bff;
+    margin-right: 10px;
+}
+
+.report-details a:hover {
+    text-decoration: underline;
+}
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+	.resource-links {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.resource-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.resource-links a:hover {
+    color: #017bff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pattern Recognition & Machine Learning</h1>
+        <h1>Course Project-CSL2050</h1>
+        <h2>Sentiment Analysis of Twitter Tweets Dataset</h2>
+	
+
+    </header>
+    <main>
+	<div class="resource-links">
+    <a href="url_to_paper" target="_blank">Paper</a> |
+    <a href="url_to_code" target="_blank">Code</a> |
+    <a href="url_to_dataset" target="_blank">Dataset</a> |
+    <a href="url_to_poster" target="_blank">Poster</a> |
+    <a href="url_to_slides" target="_blank">Slides</a> |
+    <a href="url_to_short_talk" target="_blank">Short Talk</a>
+</div>
+        <!-- <h2>Input Form</h2>
+        <form id="predictionForm">
+    <label for="sentence">Enter your sentence:</label>
+    <input type="text" id="sentence" name="sentence" required>
+
+    <label for="age">Enter age:</label>
+    <input type="text" id="age" name="age" required>
+
+    <label for="time">Choose time of day:</label>
+    <select id="time" name="time" required>
+        <option value="0">Morning</option>
+        <option value="1">Afternoon</option>
+        <option value="2">Night</option>
+    </select>
+    <input type="button" value="Submit" onclick="submitPrediction()">
+</form> -->
+<h1> Text Sentiment Analysis </h1><br>
+        
+<form method="POST" action="{{ url_for('home') }}">
+    <b> User Text :  <input type="text" name='a' placeholder="enter text"> <br><br>
+    Age :  <input type="number" name='b' placeholder="enter age"> <br><br>
+    Time(0:morning,1:evening,2:night) :  <input type="number" name='c' placeholder="time"> <br><br>
+    <input type="submit" value='predict!'>
+</form>
+<center>
+    {% if data is defined %}
+    <h1> PREDICTION :  </h1>
+    <h2> Predicted Sentiment: {{ data }} </h2>
+    {% endif %}
+</center>
+<div id="predictionResult"></div>
+	<h2>Video demo</h2>
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PvFshrgv9sc" frameborder="0" allowfullscreen></iframe>
+</div>
+        <h2>Abstract</h2>
+        <p>The objective of this project was to identify and thereby predict the sentiment of short text (tweets) as whether it is negative, neutral or positive. This included implementation of several classical Machine Learning algorithms and techniques, which included:</p>
+
+        <ul>
+            <li>Perceptron</li>
+            <li>Support Vector Machine</li>
+            <li>Decision Trees</li>
+            <li>Ensemble Learning</li>
+            <li>K-nearest neighbour</li>
+        </ul>
+        <p>Also, prior to application of the aforementioned techniques, the dataset itself was processed in the 4 ways listed below:</p>
+        <ul>
+            <li>X</li>
+            <li>Y</li>
+            <li>Principal Component Analysis</li>
+            <li>Linear Discriminant Analysis</li>
+        </ul>
+
+        <h2>Image Carousel</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="C:/Users/gupta/Desktop/Website/1.jpeg">
+                <img src="C:/Users/gupta/Desktop/Website/2.jpeg">
+            </div>
+            <div class="carousel-controls">
+                <button class="control" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="control" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <h2>Performance Comparison</h2>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+            </tr>
+            <tr>
+                <td>Perceptron</td>
+                <td>0.75</td>
+                <td>0.76</td>
+                <td>0.74</td>
+                <td>0.75</td>
+            </tr>
+            <tr>
+                <td>SVM</td>
+                <td>0.82</td>
+                <td>0.83</td>
+                <td>0.81</td>
+                <td>0.82</td>
+            </tr>
+            <tr>
+                <td>Decision Tree</td>
+                <td>0.70</td>
+                <td>0.72</td>
+                <td>0.68</td>
+                <td>0.70</td>
+            </tr>
+        </table>
+	<h2>Report</h2>
+<div class="report-container">
+    <a href="url_to_report.pdf" target="_blank">
+        <img src="path_to_report_image.jpg" alt="Report Image" class="report-image">
+    </a>
+    <div class="report-details">
+        <h3>Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions</h3>
+        <p>Prajwal Gatti, Kshitij Gopal Parikh, Drithi Prasanna Paul, Manish Gupta, Anand Mishra.</p>
+    </div>
+</div>
+       	<h2>Team</h2>
+<div class="team-container">
+    <!-- Member 1 -->
+    <div class="team-member">
+        <img src="path_to_member_1_image.jpg" alt="Prajwal Gatti">
+        <h3>Mukund Gupta</h3>
+	<h3>B22CS086</h3>
+        <a href="https://www.linkedin.com/in/prajwalgatti" target="_blank">LinkedIn</a>
+    </div>
+    <!-- Repeat blocks for other team members -->
+</div>
+
+    </main>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.querySelectorAll('.carousel-images img');
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function moveSlide(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+    </script>
+<script>
+function submitPrediction() {
+    var sentence = document.getElementById('sentence').value;
+    var age = document.getElementById('age').value;
+    var time = document.getElementById('time').value;
+
+    var data = {
+        sentence: sentence,
+        age: age,
+        time_of_day: time
+    };
+
+    fetch('/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('predictionResult').innerHTML = 'Prediction: ' + data.prediction;
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+</script>
+</body>
+</html>
