@@ -43,7 +43,7 @@
 .team-member {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,7 +54,7 @@
 .team-member img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 60%;
     margin-bottom: 10px;
 }
 
@@ -87,7 +87,7 @@
         }
         .carousel-images img {
             width: 100%;
-            transition: transform 0.5s ease; /* Smoothing transition */
+            transition: transform 1.8 s ease; /* Smoothing transition */
             display: block;
         }
         .carousel-controls {
@@ -215,19 +215,20 @@
 <body>
     <header>
         <h1>Pattern Recognition & Machine Learning</h1>
-        <h1>Course Project-CSL2050</h1>
-        <h2>Sentiment Analysis of Twitter Tweets Dataset</h2>
+        <h2>Course Project-CSL2050</h2>
+        <h1>Sentiment Analysis of Twitter Tweets Dataset</h1>
+<header> <h1>(Text Sentiment Analysis) </h1></header>
 	
 
     </header>
     <main>
 	<div class="resource-links">
-    <a href="url_to_paper" target="_blank">Paper</a> |
-    <a href="url_to_code" target="_blank">Code</a> |
-    <a href="url_to_dataset" target="_blank">Dataset</a> |
-    <a href="url_to_poster" target="_blank">Poster</a> |
+    <a href="" target="_blank">Report</a> |
+    <a href="https://github.com/kp-19/CSL2050-Course-Project.git" target="_blank">Code</a> |
+    <a href="https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset" target="_blank">Dataset</a> |
+    <a href="url_to_poster" target="_blank">Demo</a> |
     <a href="url_to_slides" target="_blank">Slides</a> |
-    <a href="url_to_short_talk" target="_blank">Short Talk</a>
+    <a href="url_to_short_talk" target="_blank">Short Presentation</a>
 </div>
         <!-- <h2>Input Form</h2>
         <form id="predictionForm">
@@ -245,48 +246,32 @@
     </select>
     <input type="button" value="Submit" onclick="submitPrediction()">
 </form> -->
-<h1> Text Sentiment Analysis </h1><br>
-        
-<form method="POST" action="{{ url_for('home') }}">
-    <b> User Text :  <input type="text" name='a' placeholder="enter text"> <br><br>
-    Age :  <input type="number" name='b' placeholder="enter age"> <br><br>
-    Time(0:morning,1:evening,2:night) :  <input type="number" name='c' placeholder="time"> <br><br>
-    <input type="submit" value='predict!'>
-</form>
-<center>
-    {% if data is defined %}
-    <h1> PREDICTION :  </h1>
-    <h2> Predicted Sentiment: {{ data }} </h2>
-    {% endif %}
-</center>
+       
+<h1> Problem Statement:</h1>
+<p>Sentiment analysis is the process of computationally determining the emotional tone or opinion expressed in a piece
+    of text (e.g., Tweet or product review), helping to understand whether the sentiment is positive, negative, or neutral.</p>
 <div id="predictionResult"></div>
 	<h2>Video demo</h2>
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/PvFshrgv9sc" frameborder="0" allowfullscreen></iframe>
 </div>
         <h2>Abstract</h2>
-        <p>The objective of this project was to identify and thereby predict the sentiment of short text (tweets) as whether it is negative, neutral or positive. This included implementation of several classical Machine Learning algorithms and techniques, which included:</p>
+        <p>A text can provide extensive insight into the sentiment conveyed by the author. Consequently, sentiment analysis derived from textual input is a well-established problem statement in the domains of machine learning and natural language processing (NLP). In this project, we aimed to address this challenge by employing a conventional machine learning methodology to analyze a dataset of over 30,000 tweets from Twitter. The objective was to implement and analyze different classifiers on the Sentiment Analysis Dataset, utilizing various preprocessing techniques (LDA & PCA) and tokenizers (BERTTokenizer and TFIDtokenizer). The project explored and thoroughly analyzed the performance of classifiers- Decision Trees, Random Forests, SVMs, Naive-Bayes, Perceptron and Logistic Regression, optimizing each to yield maximum accuracy by modifying any parameters or hyperparameter tuning. Finally, ensemble learning was employed to achieve optimum performance of the model. It was observed that TFID gave the maximum accuracy, which reached as high as 71.5%.</p>
 
-        <ul>
-            <li>Perceptron</li>
-            <li>Support Vector Machine</li>
-            <li>Decision Trees</li>
-            <li>Ensemble Learning</li>
-            <li>K-nearest neighbour</li>
-        </ul>
-        <p>Also, prior to application of the aforementioned techniques, the dataset itself was processed in the 4 ways listed below:</p>
-        <ul>
-            <li>X</li>
-            <li>Y</li>
-            <li>Principal Component Analysis</li>
-            <li>Linear Discriminant Analysis</li>
-        </ul>
+        
 
         <h2>Image Carousel</h2>
         <div class="carousel">
             <div class="carousel-images">
-                <img src="C:/Users/gupta/Desktop/Website/1.jpeg">
-                <img src="C:/Users/gupta/Desktop/Website/2.jpeg">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig7.png?raw=true">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig9.png?raw=true">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig10.png?raw=true">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig12.png?raw=true">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig13.png?raw=true">
+                <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Fig15.png?raw=true">
+                
+                
+
             </div>
             <div class="carousel-controls">
                 <button class="control" onclick="moveSlide(-1)">&#10094;</button>
@@ -294,37 +279,9 @@
             </div>
         </div>
 
-        <h2>Performance Comparison</h2>
-        <table>
-            <tr>
-                <th>Model</th>
-                <th>Accuracy</th>
-                <th>Precision</th>
-                <th>Recall</th>
-                <th>F1 Score</th>
-            </tr>
-            <tr>
-                <td>Perceptron</td>
-                <td>0.75</td>
-                <td>0.76</td>
-                <td>0.74</td>
-                <td>0.75</td>
-            </tr>
-            <tr>
-                <td>SVM</td>
-                <td>0.82</td>
-                <td>0.83</td>
-                <td>0.81</td>
-                <td>0.82</td>
-            </tr>
-            <tr>
-                <td>Decision Tree</td>
-                <td>0.70</td>
-                <td>0.72</td>
-                <td>0.68</td>
-                <td>0.70</td>
-            </tr>
-        </table>
+        <h2>Performance Overview: </h2>
+        <center>
+        <img src="https://github.com/kp-19/CSL2050-Course-Project/blob/main/images/Table9.png?raw=true"></center>
 	<h2>Report</h2>
 <div class="report-container">
     <a href="url_to_report.pdf" target="_blank">
@@ -335,14 +292,40 @@
         <p>Prajwal Gatti, Kshitij Gopal Parikh, Drithi Prasanna Paul, Manish Gupta, Anand Mishra.</p>
     </div>
 </div>
-       	<h2>Team</h2>
+       	<h2>Group members</h2>
 <div class="team-container">
     <!-- Member 1 -->
     <div class="team-member">
-        <img src="path_to_member_1_image.jpg" alt="Prajwal Gatti">
+        <img src="https://media.licdn.com/dms/image/D5603AQGM_iO2CJHuVQ/profile-displayphoto-shrink_400_400/0/1713692174607?e=1719446400&v=beta&t=M1DNcgsGz61LedBzKLuc_oUid4ZAxi7ccVli-_0I8fg" alt="Mukund Gupta">
         <h3>Mukund Gupta</h3>
 	<h3>B22CS086</h3>
-        <a href="https://www.linkedin.com/in/prajwalgatti" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/mukund-gupta-b93a252a0/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="team-member">
+        <img src="https://media.licdn.com/dms/image/D5603AQFk-6xpcW4yYQ/profile-displayphoto-shrink_400_400/0/1713292694650?e=1719446400&v=beta&t=vT80KpcjFtNRtOVXVX4w3XCbceN9-Ew6UrWBEER-MZU" alt="Harshit Goyal">
+        <h3>Harshit Goyal</h3>
+	<h3>B22CS024</h3>
+        <a href="https://www.linkedin.com/in/harshit-goyal-4b604225a/" target="_blank">LinkedIn</a>
+    </div><div class="team-member">
+        <img src="https://media.licdn.com/dms/image/D4D03AQHlXjUz2wbQHA/profile-displayphoto-shrink_400_400/0/1702303826940?e=1719446400&v=beta&t=2q_yHiqT5I_CDcGwoCqKFbktVpvKyX7HSgcba6Jsq6s" alt="Gouri Patidar">
+        <h3>Gouri Patidar</h3>
+	<h3>B22AI020</h3>
+        <a href="https://www.linkedin.com/in/gouri-patidar-652b99256/" target="_blank">LinkedIn</a>
+    </div><div class="team-member">
+        <img src="https://media.licdn.com/dms/image/D4D03AQEs09DqjILVaw/profile-displayphoto-shrink_400_400/0/1670164454060?e=1719446400&v=beta&t=qc6T9vQUVU_Ieid1evacYG2U_mJmbOo7wZHKQWKDvvQ" alt="Krishna Balaji Patil">
+        <h3>Krishna Balaji Patil</h3>
+	<h3>B22CS078</h3>
+        <a href="https://www.linkedin.com/in/krishna-patil-574a50256/" target="_blank">LinkedIn</a>
+    </div><div class="team-member">
+        <img src="https://media.licdn.com/dms/image/D4D03AQFq2FflUdrtVQ/profile-displayphoto-shrink_400_400/0/1708600659939?e=1719446400&v=beta&t=fEjeMphSA3XgkM3eHh5vGTFrknn781W44aw_Pp1rdXg" alt="Aarohi Dharmadhikari">
+        <h3>Aarohi Dharmadhikari</h3>
+	<h3>B22AI001</h3>
+        <a href="https://www.linkedin.com/in/aarohi-dharmadhikari-5b5a14256/" target="_blank">LinkedIn</a>
+    </div><div class="team-member">
+        <img src="https://media.licdn.com/dms/image/D4D03AQGkr4vh9ddCtw/profile-displayphoto-shrink_400_400/0/1692127828810?e=1719446400&v=beta&t=_IJc6Zt0Lks0QtbCvfdpyrE-AV__boS1ceFsYGW1-Fc" alt="Saumitr Agrawal">
+        <h3>Saumitr Agrawal</h3>
+	<h3>B22AI054</h3>
+        <a href="https://www.linkedin.com/in/saumitr-agrawal-63bb51256/" target="_blank">LinkedIn</a>
     </div>
     <!-- Repeat blocks for other team members -->
 </div>

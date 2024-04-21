@@ -221,36 +221,13 @@
 
     </header>
     <main>
-	<div class="resource-links">
-    <a href="url_to_paper" target="_blank">Paper</a> |
-    <a href="url_to_code" target="_blank">Code</a> |
-    <a href="url_to_dataset" target="_blank">Dataset</a> |
-    <a href="url_to_poster" target="_blank">Poster</a> |
-    <a href="url_to_slides" target="_blank">Slides</a> |
-    <a href="url_to_short_talk" target="_blank">Short Talk</a>
-</div>
-        <!-- <h2>Input Form</h2>
-        <form id="predictionForm">
-    <label for="sentence">Enter your sentence:</label>
-    <input type="text" id="sentence" name="sentence" required>
 
-    <label for="age">Enter age:</label>
-    <input type="text" id="age" name="age" required>
-
-    <label for="time">Choose time of day:</label>
-    <select id="time" name="time" required>
-        <option value="0">Morning</option>
-        <option value="1">Afternoon</option>
-        <option value="2">Night</option>
-    </select>
-    <input type="button" value="Submit" onclick="submitPrediction()">
-</form> -->
 <h1> Text Sentiment Analysis </h1><br>
         
 <form method="POST" action="{{ url_for('home') }}">
     <b> User Text :  <input type="text" name='a' placeholder="enter text"> <br><br>
     Age :  <input type="number" name='b' placeholder="enter age"> <br><br>
-    Time(0:morning,1:evening,2:night) :  <input type="number" name='c' placeholder="time"> <br><br>
+    Time(0:morning,1:noon,2:night) :  <input type="number" name='c' placeholder="time"> <br><br>
     <input type="submit" value='predict!'>
 </form>
 <center>
@@ -260,92 +237,6 @@
     {% endif %}
 </center>
 <div id="predictionResult"></div>
-	<h2>Video demo</h2>
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PvFshrgv9sc" frameborder="0" allowfullscreen></iframe>
-</div>
-        <h2>Abstract</h2>
-        <p>The objective of this project was to identify and thereby predict the sentiment of short text (tweets) as whether it is negative, neutral or positive. This included implementation of several classical Machine Learning algorithms and techniques, which included:</p>
-
-        <ul>
-            <li>Perceptron</li>
-            <li>Support Vector Machine</li>
-            <li>Decision Trees</li>
-            <li>Ensemble Learning</li>
-            <li>K-nearest neighbour</li>
-        </ul>
-        <p>Also, prior to application of the aforementioned techniques, the dataset itself was processed in the 4 ways listed below:</p>
-        <ul>
-            <li>X</li>
-            <li>Y</li>
-            <li>Principal Component Analysis</li>
-            <li>Linear Discriminant Analysis</li>
-        </ul>
-
-        <h2>Image Carousel</h2>
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="C:/Users/gupta/Desktop/Website/1.jpeg">
-                <img src="C:/Users/gupta/Desktop/Website/2.jpeg">
-            </div>
-            <div class="carousel-controls">
-                <button class="control" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="control" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </div>
-
-        <h2>Performance Comparison</h2>
-        <table>
-            <tr>
-                <th>Model</th>
-                <th>Accuracy</th>
-                <th>Precision</th>
-                <th>Recall</th>
-                <th>F1 Score</th>
-            </tr>
-            <tr>
-                <td>Perceptron</td>
-                <td>0.75</td>
-                <td>0.76</td>
-                <td>0.74</td>
-                <td>0.75</td>
-            </tr>
-            <tr>
-                <td>SVM</td>
-                <td>0.82</td>
-                <td>0.83</td>
-                <td>0.81</td>
-                <td>0.82</td>
-            </tr>
-            <tr>
-                <td>Decision Tree</td>
-                <td>0.70</td>
-                <td>0.72</td>
-                <td>0.68</td>
-                <td>0.70</td>
-            </tr>
-        </table>
-	<h2>Report</h2>
-<div class="report-container">
-    <a href="url_to_report.pdf" target="_blank">
-        <img src="path_to_report_image.jpg" alt="Report Image" class="report-image">
-    </a>
-    <div class="report-details">
-        <h3>Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions</h3>
-        <p>Prajwal Gatti, Kshitij Gopal Parikh, Drithi Prasanna Paul, Manish Gupta, Anand Mishra.</p>
-    </div>
-</div>
-       	<h2>Team</h2>
-<div class="team-container">
-    <!-- Member 1 -->
-    <div class="team-member">
-        <img src="path_to_member_1_image.jpg" alt="Prajwal Gatti">
-        <h3>Mukund Gupta</h3>
-	<h3>B22CS086</h3>
-        <a href="https://www.linkedin.com/in/prajwalgatti" target="_blank">LinkedIn</a>
-    </div>
-    <!-- Repeat blocks for other team members -->
-</div>
 
     </main>
     <script>
